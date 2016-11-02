@@ -52,8 +52,10 @@ tr:nth-child(even) {
 /*Pagination*/
 #cont{
   position: absolute;
-  top:10px;
+  margin-top: 55%;
+  margin-left: 40%;"
 }
+
 button{
   width: 4em;
   height: 3em;

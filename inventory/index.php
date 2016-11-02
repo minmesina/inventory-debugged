@@ -101,12 +101,12 @@ require_once("includes/connection.php");
 							echo "<button>Prev</button>";
 						}else{
 							$j = $page - 1;
-							echo "<button><a id='page_a_link' href='stocks.php?page=$j'>Prev</a></button>";
+							echo "<button><a id='page_a_link' href='?page=$j'>Prev</a></button>";
 						}
 
 						for($i=1; $i <= $totalPages; $i++){
 							if($i<>$page){
-								echo "<button><a id='page_a_link' href='stocks.php?page=$i'>$i</a></button>";
+								echo "<button><a id='page_a_link' href='?page=$i'>$i</a></button>";
 							}else{
 								echo "<button>$i</button>";
 							}
@@ -116,7 +116,7 @@ require_once("includes/connection.php");
 						echo "<button>Next</button>";
 					}else{
 						$j = $page + 1;
-						echo "<button><a id='page_a_link' href='stocks.php?page=$j'>Next</a></button>";
+						echo "<button><a id='page_a_link' href='?page=$j'>Next</a></button>";
 					}
 				}?>
 			</div>

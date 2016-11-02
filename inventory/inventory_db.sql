@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 27, 2016 at 02:43 PM
+-- Generation Time: Nov 02, 2016 at 08:10 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -182,6 +182,32 @@ CREATE TABLE `item_list_sold` (
   `selling_price` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `item_list_sold`
+--
+
+INSERT INTO `item_list_sold` (`sales_id`, `item_id`, `item_category_id`, `item_sold_name`, `quantity_sold`, `selling_price`) VALUES
+(89, 142, 25, '607 zz', 2, 50),
+(89, 151, 25, '6000 ZNSK', 3, 80),
+(89, 160, 25, '6006 koyo', 1, 90),
+(93, 151, 25, '6000 ZNSK', 2, 80),
+(93, 156, 25, '6002 Nachi', 5, 40),
+(96, 144, 25, '627', 5, 70),
+(96, 148, 25, '6900 E20', 1, 50),
+(96, 157, 25, '6003 zz Nachi', 2, 70),
+(96, 159, 25, '6005', 1, 80),
+(96, 149, 25, '1680 Thailand', 2, 40),
+(96, 151, 25, '6000 ZNSK', 1, 80),
+(103, 150, 25, '69 22', 4, 130),
+(103, 145, 25, '609 NTN', 3, 60),
+(103, 152, 25, '6001 ZZ Nachi', 1, 50),
+(103, 151, 25, '6000 ZNSK', 2, 80),
+(104, 143, 25, '262 Nachi', 2, 70),
+(104, 148, 25, '6900 E20', 5, 50),
+(104, 153, 25, '6001 1NKSE Nach', 1, 50),
+(104, 162, 25, '6007 zz Nachi', 1, 130),
+(104, 163, 25, '6008 NSK', 1, 180);
+
 -- --------------------------------------------------------
 
 --
@@ -195,6 +221,22 @@ CREATE TABLE `sales` (
   `amount_paid` int(11) NOT NULL,
   `customer_id` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sales`
+--
+
+INSERT INTO `sales` (`sales_id`, `sales_date`, `total`, `amount_paid`, `customer_id`) VALUES
+(89, '2016-10-19', 430, 1000, 15),
+(93, '2016-10-20', 360, 500, 16),
+(96, '2016-10-22', 780, 800, 17),
+(103, '2016-10-24', 910, 1000, 19),
+(104, '2016-10-27', 750, 1000, 20),
+(105, '2016-10-27', 0, 1000, 20),
+(106, '2016-10-27', 0, 1000, 20),
+(107, '2016-10-27', 0, 1000, 20),
+(108, '2016-10-27', 0, 1000, 20),
+(109, '2016-10-27', 0, 1000, 20);
 
 --
 -- Indexes for dumped tables
@@ -254,12 +296,12 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `customer_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `customer_id` int(3) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `delivery`
 --
 ALTER TABLE `delivery`
-  MODIFY `delivery_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=249;
+  MODIFY `delivery_ID` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `item`
 --
@@ -269,7 +311,7 @@ ALTER TABLE `item`
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `sales_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `sales_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
